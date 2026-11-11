@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile | Sagar Chouhan</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f5fa;
+            color: #253047;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #14213d;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #cbd5e1;
+        }
+
+        nav {
+            background: #1d3557;
+            padding: 16px 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 5px 12px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #62d6ff;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 0 18px;
+        }
+
+        .profile {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .profile img {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #dce9f8;
+            margin-bottom: 12px;
+        }
+
+        .profile h2 {
+            color: #1d3557;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            scroll-margin-top: 75px;
+        }
+
+        section h2 {
+            color: #1d3557;
+            border-bottom: 2px solid #e5edf7;
+            padding-bottom: 10px;
+            margin-bottom: 18px;
+        }
+
+        .info {
+            margin: 10px 0;
+        }
+
+        .info strong {
+            color: #1d3557;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin: 9px 0;
+        }
+
+        .skill {
+            display: inline-block;
+            background: #e5f3ff;
+            color: #15518a;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .achievement {
+            border-left: 4px solid #3185ce;
+            background: #f3f8ff;
+            padding: 13px;
+            margin: 12px 0;
+        }
+
+        .contact a {
+            color: #1673bd;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #14213d;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Student Portfolio</h1>
+        <p>Learning Today | Leading Tomorrow</p>
+    </header>
+
+    <!-- Internal Navigation Links -->
+    <nav>
+        <a href="#personal">Personal</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- Profile -->
+        <div class="profile" id="personal">
+
+            <img src="../Practical-01/assets/profile.jpg"
+                 alt="Student profile photograph">
+
+            <h2>Sagar Chouhan</h2>
+
+            <p>BCA Student | Technology Enthusiast</p>
+
+            <p>
+                Welcome to my personal student profile.
+                I am passionate about learning technology,
+                exploring new ideas and building useful projects.
+            </p>
+
+        </div>
+
+        <!-- Personal Details -->
+        <section>
+            <h2>Personal Details</h2>
+
+            <p class="info">
+                <strong>Name:</strong> Sagar Chouhan
+            </p>
+
+            <p class="info">
+                <strong>City:</strong> Surat, Gujarat, India
+            </p>
+
+            <p class="info">
+                <strong>Course:</strong> Bachelor of Computer Applications
+            </p>
+
+            <p class="info">
+                <strong>Interests:</strong> AI, Technology and Entrepreneurship
+            </p>
+
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+
+            <h2>Educational Qualification</h2>
+
+            <ul>
+                <li>Class 10 – Completed</li>
+                <li>Class 12 – Commerce Stream, GSEB</li>
+                <li>BCA – Currently Pursuing (2026–2029)</li>
+            </ul>
+
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+
+            <h2>My Skills</h2>
+
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">JavaScript Basics</span>
+            <span class="skill">AI Tools</span>
+            <span class="skill">Video Editing</span>
+            <span class="skill">Content Creation</span>
+            <span class="skill">Communication</span>
+
+        </section>
+
+        <!-- Hobbies -->
+        <section id="hobbies">
+
+            <h2>My Hobbies</h2>
+
+            <ul>
+                <li>Learning Artificial Intelligence</li>
+                <li>Exploring New Technologies</li>
+                <li>Creating Digital Content</li>
+                <li>Video Editing and Storytelling</li>
+                <li>Reading and Learning New Skills</li>
+            </ul>
+
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements">
+
+            <h2>My Achievements & Projects</h2>
+
+            <div class="achievement">
+                <strong>Project 1:</strong>
+                Created a personal introduction webpage using HTML5.
+            </div>
+
+            <div class="achievement">
+                <strong>Project 2:</strong>
+                Developed a college department webpage using HTML and CSS.
+            </div>
+
+            <div class="achievement">
+                <strong>Project 3:</strong>
+                Designed a technical event webpage.
+            </div>
+
+            <div class="achievement">
+                <strong>Goal:</strong>
+                Building practical skills in web development and AI.
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+
+            <h2>Contact Information</h2>
+
+            <p class="info">
+                <strong>Location:</strong> Surat, Gujarat, India
+            </p>
+
+            <p class="info">
+                <strong>GitHub:</strong>
+                <a href="https://github.com/" target="_blank">
+                    Visit GitHub
+                </a>
+            </p>
+
+            <p class="info">
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    Visit LinkedIn
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sagar Chouhan | Student Portfolio</p>
+        <p>Created using HTML5 and CSS3.</p>
+    </footer>
+
+</body>
+</html>
