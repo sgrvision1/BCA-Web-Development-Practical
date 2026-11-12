@@ -6,19 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Student Profile | Sagar Chouhan</title>
+    <title>BCA Semester 1 Subjects</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
-            background: #f3f5fa;
+            background: #f1f5f9;
             color: #253047;
             line-height: 1.7;
         }
@@ -27,33 +26,23 @@
             background: #14213d;
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 35px 15px;
         }
 
         header h1 {
-            font-size: 36px;
             margin-bottom: 8px;
-        }
-
-        header p {
-            color: #cbd5e1;
         }
 
         nav {
             background: #1d3557;
-            padding: 16px 10px;
+            padding: 14px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         nav a {
-            display: inline-block;
             color: white;
             text-decoration: none;
-            margin: 5px 12px;
-            font-size: 14px;
+            margin: 0 12px;
             font-weight: bold;
         }
 
@@ -61,111 +50,73 @@
             color: #62d6ff;
         }
 
-        .container {
-            max-width: 950px;
-            margin: 35px auto;
+        main {
+            max-width: 900px;
+            margin: 30px auto;
             padding: 0 18px;
         }
 
-        .profile {
-            text-align: center;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-        }
-
-        .profile img {
-            width: 145px;
-            height: 145px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #dce9f8;
-            margin-bottom: 12px;
-        }
-
-        .profile h2 {
-            color: #1d3557;
-        }
-
-        section {
+        .box {
             background: white;
             padding: 25px;
             margin-bottom: 22px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            scroll-margin-top: 75px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
         }
 
-        section h2 {
+        h2 {
             color: #1d3557;
-            border-bottom: 2px solid #e5edf7;
-            padding-bottom: 10px;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
-        .info {
-            margin: 10px 0;
+        h3 {
+            color: #2563a6;
+            margin: 15px 0 8px;
         }
 
-        .info strong {
-            color: #1d3557;
-        }
-
-        ul {
-            padding-left: 22px;
+        ol, ul {
+            padding-left: 25px;
         }
 
         li {
-            margin: 9px 0;
+            margin: 8px 0;
         }
 
-        .skill {
+        a {
+            color: #1769aa;
+        }
+
+        .subject-link {
             display: inline-block;
-            background: #e5f3ff;
-            color: #15518a;
-            padding: 8px 14px;
-            margin: 5px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-
-        .achievement {
-            border-left: 4px solid #3185ce;
-            background: #f3f8ff;
-            padding: 13px;
-            margin: 12px 0;
-        }
-
-        .contact a {
-            color: #1673bd;
+            background: #e8f2ff;
+            padding: 5px 12px;
+            border-radius: 5px;
             text-decoration: none;
         }
 
-        .contact a:hover {
-            text-decoration: underline;
+        .subject-link:hover {
+            background: #cfe4ff;
+        }
+
+        .details {
+            border-left: 4px solid #2563a6;
+            background: #f5f8fc;
+            padding: 15px;
+            margin: 15px 0;
+            scroll-margin-top: 20px;
         }
 
         footer {
             background: #14213d;
             color: white;
             text-align: center;
-            padding: 22px;
+            padding: 20px;
         }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 27px;
-            }
-
+        @media(max-width: 600px) {
             nav a {
+                display: inline-block;
                 margin: 5px;
-                font-size: 12px;
-            }
-
-            section {
-                padding: 18px;
             }
         }
     </style>
@@ -173,165 +124,198 @@
 
 <body>
 
-    <!-- Header -->
     <header>
-        <h1>My Student Portfolio</h1>
-        <p>Learning Today | Leading Tomorrow</p>
+        <h1>BCA Semester 1 Subjects</h1>
+        <p>Faculty of Computer Applications</p>
+        <p>Academic Year: 2026–2027</p>
     </header>
 
-    <!-- Internal Navigation Links -->
     <nav>
-        <a href="#personal">Personal</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#contact">Contact</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#theory">Theory</a>
+        <a href="#practical">Practical</a>
+        <a href="#details">Subject Details</a>
     </nav>
 
-    <main class="container">
+    <main>
 
-        <!-- Profile -->
-        <div class="profile" id="personal">
+        <!-- Subject List -->
+        <section class="box" id="subjects">
 
-            <img src="../Practical-01/assets/profile.jpg"
-                 alt="Student profile photograph">
-
-            <h2>Sagar Chouhan</h2>
-
-            <p>BCA Student | Technology Enthusiast</p>
+            <h2>Semester 1 Subject List</h2>
 
             <p>
-                Welcome to my personal student profile.
-                I am passionate about learning technology,
-                exploring new ideas and building useful projects.
+                The following is an example of the BCA
+                Semester 1 subject structure.
             </p>
 
-        </div>
+            <ol>
 
-        <!-- Personal Details -->
-        <section>
-            <h2>Personal Details</h2>
+                <li>
+                    <strong>Programming Fundamentals</strong>
 
-            <p class="info">
-                <strong>Name:</strong> Sagar Chouhan
-            </p>
+                    <ul>
+                        <li>Theory</li>
+                        <li>Practical</li>
+                    </ul>
 
-            <p class="info">
-                <strong>City:</strong> Surat, Gujarat, India
-            </p>
+                </li>
 
-            <p class="info">
-                <strong>Course:</strong> Bachelor of Computer Applications
-            </p>
+                <li>
+                    <strong>Computer Fundamentals</strong>
 
-            <p class="info">
-                <strong>Interests:</strong> AI, Technology and Entrepreneurship
-            </p>
+                    <ul>
+                        <li>Theory</li>
+                        <li>Practical</li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <strong>Web Development</strong>
+
+                    <ul>
+                        <li>Theory</li>
+                        <li>Practical</li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <strong>Communication Skills</strong>
+
+                    <ul>
+                        <li>Theory</li>
+                        <li>Practical Activities</li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <strong>Mathematics for Computing</strong>
+
+                    <ul>
+                        <li>Theory</li>
+                        <li>Problem Solving Practice</li>
+                    </ul>
+
+                </li>
+
+            </ol>
 
         </section>
 
-        <!-- Education -->
-        <section id="education">
+        <!-- Theory Subjects -->
+        <section class="box" id="theory">
 
-            <h2>Educational Qualification</h2>
+            <h2>Theory Subjects</h2>
+
+            <ol>
+                <li>
+                    <a class="subject-link" href="#programming">
+                        Programming Fundamentals
+                    </a>
+                </li>
+
+                <li>
+                    <a class="subject-link" href="#computer">
+                        Computer Fundamentals
+                    </a>
+                </li>
+
+                <li>
+                    <a class="subject-link" href="#web">
+                        Web Development
+                    </a>
+                </li>
+
+                <li>
+                    <a class="subject-link" href="#communication">
+                        Communication Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a class="subject-link" href="#maths">
+                        Mathematics for Computing
+                    </a>
+                </li>
+            </ol>
+
+        </section>
+
+        <!-- Practical Subjects -->
+        <section class="box" id="practical">
+
+            <h2>Practical Subjects</h2>
 
             <ul>
-                <li>Class 10 – Completed</li>
-                <li>Class 12 – Commerce Stream, GSEB</li>
-                <li>BCA – Currently Pursuing (2026–2029)</li>
+                <li>Programming Lab</li>
+                <li>Computer Applications Lab</li>
+                <li>Web Development Lab</li>
+                <li>Communication Activities</li>
+                <li>Mathematics Practice</li>
             </ul>
 
         </section>
 
-        <!-- Skills -->
-        <section id="skills">
+        <!-- Subject Details -->
+        <section class="box" id="details">
 
-            <h2>My Skills</h2>
+            <h2>Subject Details</h2>
 
-            <span class="skill">HTML5</span>
-            <span class="skill">CSS3</span>
-            <span class="skill">JavaScript Basics</span>
-            <span class="skill">AI Tools</span>
-            <span class="skill">Video Editing</span>
-            <span class="skill">Content Creation</span>
-            <span class="skill">Communication</span>
-
-        </section>
-
-        <!-- Hobbies -->
-        <section id="hobbies">
-
-            <h2>My Hobbies</h2>
-
-            <ul>
-                <li>Learning Artificial Intelligence</li>
-                <li>Exploring New Technologies</li>
-                <li>Creating Digital Content</li>
-                <li>Video Editing and Storytelling</li>
-                <li>Reading and Learning New Skills</li>
-            </ul>
-
-        </section>
-
-        <!-- Achievements -->
-        <section id="achievements">
-
-            <h2>My Achievements & Projects</h2>
-
-            <div class="achievement">
-                <strong>Project 1:</strong>
-                Created a personal introduction webpage using HTML5.
+            <div class="details" id="programming">
+                <h3>1. Programming Fundamentals</h3>
+                <p>
+                    Learn basic programming concepts,
+                    variables, operators, conditions and loops.
+                </p>
+                <a href="#subjects">Back to Subject List ↑</a>
             </div>
 
-            <div class="achievement">
-                <strong>Project 2:</strong>
-                Developed a college department webpage using HTML and CSS.
+            <div class="details" id="computer">
+                <h3>2. Computer Fundamentals</h3>
+                <p>
+                    Learn about computer hardware, software,
+                    operating systems and computer applications.
+                </p>
+                <a href="#subjects">Back to Subject List ↑</a>
             </div>
 
-            <div class="achievement">
-                <strong>Project 3:</strong>
-                Designed a technical event webpage.
+            <div class="details" id="web">
+                <h3>3. Web Development</h3>
+                <p>
+                    Learn HTML, CSS, webpage structure,
+                    hyperlinks and website development.
+                </p>
+                <a href="#subjects">Back to Subject List ↑</a>
             </div>
 
-            <div class="achievement">
-                <strong>Goal:</strong>
-                Building practical skills in web development and AI.
+            <div class="details" id="communication">
+                <h3>4. Communication Skills</h3>
+                <p>
+                    Improve speaking, writing, presentation
+                    and professional communication skills.
+                </p>
+                <a href="#subjects">Back to Subject List ↑</a>
             </div>
 
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="contact">
-
-            <h2>Contact Information</h2>
-
-            <p class="info">
-                <strong>Location:</strong> Surat, Gujarat, India
-            </p>
-
-            <p class="info">
-                <strong>GitHub:</strong>
-                <a href="https://github.com/" target="_blank">
-                    Visit GitHub
-                </a>
-            </p>
-
-            <p class="info">
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/" target="_blank">
-                    Visit LinkedIn
-                </a>
-            </p>
+            <div class="details" id="maths">
+                <h3>5. Mathematics for Computing</h3>
+                <p>
+                    Study mathematical concepts used in
+                    computing and logical problem solving.
+                </p>
+                <a href="#subjects">Back to Subject List ↑</a>
+            </div>
 
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Sagar Chouhan | Student Portfolio</p>
-        <p>Created using HTML5 and CSS3.</p>
+        <p>&copy; 2026 BCA Semester 1</p>
+        <p>Created using HTML5 and CSS3</p>
     </footer>
 
 </body>
