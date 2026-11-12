@@ -1,0 +1,35 @@
+
+body {
+    background-color: lightblue;
+    font-family: Arial;
+    margin: 20px;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+.profile {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+
+h2 {
+    color: darkred;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    color: black;
+}
+
+li {
+    color: green;
+    padding: 5px;
+}
