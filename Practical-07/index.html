@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2f8;
+            color: #243047;
+        }
+
+        header {
+            background: #14213d;
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 35px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1d3557;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .options label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .options input {
+            width: auto;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submit {
+            background: #2563eb;
+            color: white;
+        }
+
+        .submit:hover {
+            background: #1d4ed8;
+        }
+
+        .reset {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Marwadi University</h1>
+        <p>Faculty of Computer Applications</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Student Registration Form</h2>
+        <p class="subtitle">
+            Please fill in your personal and academic details.
+        </p>
+
+        <form action="#" method="get">
+
+            <div class="field">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Password *</label>
+                <input type="password" id="password"
+                       placeholder="Create a password"
+                       minlength="8" required>
+            </div>
+
+            <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="Enter phone number"
+                       pattern="[0-9]{10}" maxlength="10">
+            </div>
+
+            <div class="field">
+                <label>Gender *</label>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Male" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Female"> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Other"> Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="field">
+                <label for="city">City *</label>
+                <select id="city" name="city" required>
+                    <option value="">Select your city</option>
+                    <option>Surat</option>
+                    <option>Rajkot</option>
+                    <option>Ahmedabad</option>
+                    <option>Vadodara</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="course">Course *</label>
+                <select id="course" name="course" required>
+                    <option value="">Select your course</option>
+                    <option>BCA</option>
+                    <option>BBA</option>
+                    <option>B.Com</option>
+                    <option>B.Sc</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Hobbies</label>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="hobby"
+                               value="Reading"> Reading
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby"
+                               value="Sports"> Sports
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby"
+                               value="Coding"> Coding
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby"
+                               value="Music"> Music
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="address">Address *</label>
+                <textarea id="address" name="address"
+                          rows="4" required
+                          placeholder="Enter your address"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="submit">
+                    Register Now
+                </button>
+                <button type="reset" class="reset">
+                    Reset Form
+                </button>
+            </div>
+
+        </form>
+
+        <p class="subtitle">
+            Demo form only. No information is stored.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BCA Web Development Practical</p>
+    </footer>
+
+</body>
+</html>
