@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subject Information</title>
+</head>
+<body>
+
+    <h2>Student Subject Information</h2>
+
+    <label>Select Subject:</label>
+
+    <select id="subject" onchange="showSubject()">
+        <option value="">Select Subject</option>
+        <option value="0">HTML</option>
+        <option value="1">CSS</option>
+        <option value="2">JavaScript</option>
+        <option value="3">Computer Fundamentals</option>
+        <option value="4">Programming</option>
+    </select>
+
+    <h3>Subject Details:</h3>
+
+    <p id="details">Please select a subject.</p>
+
+    <script>
+
+        var subjects = [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Computer Fundamentals",
+            "Programming"
+        ];
+
+        var information = [
+            "HTML is used to create web pages.",
+            "CSS is used to design web pages.",
+            "JavaScript is used to make web pages interactive.",
+            "Computer Fundamentals teaches basic computer concepts.",
+            "Programming is used to create computer programs."
+        ];
+
+        function showSubject() {
+
+            var choice = document.getElementById("subject").value;
+
+            if (choice == "") {
+                document.getElementById("details").innerHTML =
+                "Please select a subject.";
+            }
+            else {
+                document.getElementById("details").innerHTML =
+                "<b>" + subjects[choice] + "</b><br>" +
+                information[choice];
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
