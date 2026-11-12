@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Shapes</title>
+</head>
+<body>
+
+    <h2>HTML5 Canvas Shapes</h2>
+
+    <canvas id="myCanvas" width="500" height="300"
+    style="border:1px solid black;">
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(30, 30, 120, 70);
+
+        // Circle
+        ctx.beginPath();
+        ctx.arc(230, 65, 40, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        // Line
+        ctx.beginPath();
+        ctx.moveTo(30, 180);
+        ctx.lineTo(300, 180);
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    </script>
+
+</body>
+</html>
