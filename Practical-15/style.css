@@ -1,0 +1,84 @@
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: lightgray;
+}
+
+/* Navigation */
+nav {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* Home Section */
+.home {
+    background-color: lightblue;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Product Section */
+.product {
+    background-color: white;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.product img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Heading Pseudo Element */
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: blue;
+    margin-top: 5px;
+}
+
+/* Button */
+button {
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: darkblue;
+    transform: scale(1.05);
+}
+
+/* Contact */
+.contact {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
