@@ -6,38 +6,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BCA Student Result Dashboard</title>
+    <title>Student Profile | Sagar Chouhan</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
             background: #f1f5f9;
-            color: #1e293b;
-            padding: 30px 15px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
+            color: #263247;
+            line-height: 1.7;
         }
 
         header {
-            background: #172554;
+            background: #14213d;
             color: white;
-            padding: 30px;
             text-align: center;
-            border-radius: 12px;
-            margin-bottom: 25px;
+            padding: 40px 20px;
         }
 
         header h1 {
-            font-size: 28px;
+            font-size: 34px;
             margin-bottom: 8px;
         }
 
@@ -45,104 +39,126 @@
             color: #cbd5e1;
         }
 
-        .summary {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .summary-card {
-            flex: 1;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
+        nav {
+            background: #1d3557;
+            padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #62d6ff;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        .profile {
+            background: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            scroll-margin-top: 80px;
+        }
+
+        .profile img {
+            width: 145px;
+            height: 145px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #dce9f8;
+            margin-bottom: 12px;
+        }
+
+        .profile h2 {
+            color: #1d3557;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 10px;
             box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+            scroll-margin-top: 80px;
         }
 
-        .summary-card h2 {
-            color: #2563eb;
-            font-size: 28px;
+        section h2 {
+            color: #1d3557;
+            border-bottom: 2px solid #e5edf7;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        .summary-card p {
-            color: #64748b;
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 9px 0;
+        }
+
+        .skill {
+            display: inline-block;
+            background: #e5f3ff;
+            color: #15518a;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 20px;
             font-size: 14px;
         }
 
-        .table-box {
-            background: white;
-            padding: 22px;
-            border-radius: 12px;
-            overflow-x: auto;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        .achievement {
+            background: #f3f8ff;
+            border-left: 4px solid #3185ce;
+            padding: 14px;
+            margin: 12px 0;
         }
 
-        .table-box h2 {
-            margin-bottom: 18px;
-            color: #172554;
+        .contact a {
+            color: #1769aa;
+            text-decoration: none;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 850px;
-            text-align: center;
-        }
-
-        th {
-            background: #1e3a8a;
-            color: white;
-            padding: 14px 10px;
-        }
-
-        td {
-            padding: 13px 10px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        tbody tr:nth-child(even) {
-            background: #f8fafc;
-        }
-
-        tbody tr:hover {
-            background: #eaf2ff;
-        }
-
-        .grade {
-            display: inline-block;
-            background: #dcfce7;
-            color: #166534;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-
-        tfoot {
-            background: #e2e8f0;
-            font-weight: bold;
-        }
-
-        .note {
-            margin-top: 20px;
-            color: #64748b;
-            font-size: 13px;
+        .contact a:hover {
+            text-decoration: underline;
         }
 
         footer {
+            background: #14213d;
+            color: white;
             text-align: center;
-            margin-top: 25px;
-            color: #64748b;
-            font-size: 13px;
+            padding: 22px;
         }
 
-        @media (max-width: 650px) {
-            .summary {
-                flex-direction: column;
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 26px;
             }
 
-            header h1 {
-                font-size: 22px;
+            nav a {
+                font-size: 12px;
+                margin: 5px;
+            }
+
+            section {
+                padding: 18px;
             }
         }
     </style>
@@ -150,146 +166,148 @@
 
 <body>
 
-    <div class="container">
+    <!-- Website Header -->
+    <header>
+        <h1>My Student Portfolio</h1>
+        <p>Learning Today | Leading Tomorrow</p>
+    </header>
 
-        <!-- Header -->
-        <header>
-            <h1>BCA Student Result Dashboard</h1>
-            <p>Web Development Practical | Academic Result Report</p>
-        </header>
+    <!-- Internal Navigation -->
+    <nav>
+        <a href="#personal">Personal Details</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-        <!-- Summary Cards -->
-        <div class="summary">
+    <main>
 
-            <div class="summary-card">
-                <h2>5</h2>
-                <p>Total Students</p>
-            </div>
+        <!-- Personal Details -->
+        <div class="profile" id="personal">
 
-            <div class="summary-card">
-                <h2>300</h2>
-                <p>Maximum Marks</p>
-            </div>
+            <img src="../Practical-01/assets/profile.jpg"
+                 alt="Sagar Chouhan Profile Photo">
 
-            <div class="summary-card">
-                <h2>3</h2>
-                <p>Subjects</p>
-            </div>
+            <h2>Sagar Chouhan</h2>
 
-        </div>
+            <p>BCA Student | Technology Enthusiast</p>
 
-        <!-- Student Marks Table -->
-        <div class="table-box">
-
-            <h2>Student Academic Performance</h2>
-
-            <table>
-
-                <thead>
-                    <tr>
-                        <th>Sr. No.</th>
-                        <th>Roll No.</th>
-                        <th>Student Name</th>
-                        <th>HTML</th>
-                        <th>CSS</th>
-                        <th>JavaScript</th>
-                        <th>Total</th>
-                        <th>Percentage</th>
-                        <th>Grade</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>1</td>
-                        <td>101</td>
-                        <td>Aarav</td>
-                        <td>85</td>
-                        <td>90</td>
-                        <td>88</td>
-                        <td>263</td>
-                        <td>87.67%</td>
-                        <td><span class="grade">A</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>102</td>
-                        <td>Priya</td>
-                        <td>78</td>
-                        <td>82</td>
-                        <td>80</td>
-                        <td>240</td>
-                        <td>80.00%</td>
-                        <td><span class="grade">A</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>103</td>
-                        <td>Rahul</td>
-                        <td>65</td>
-                        <td>70</td>
-                        <td>68</td>
-                        <td>203</td>
-                        <td>67.67%</td>
-                        <td><span class="grade">B</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>104</td>
-                        <td>Neha</td>
-                        <td>55</td>
-                        <td>60</td>
-                        <td>58</td>
-                        <td>173</td>
-                        <td>57.67%</td>
-                        <td><span class="grade">C</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>5</td>
-                        <td>105</td>
-                        <td>Rohan</td>
-                        <td>92</td>
-                        <td>95</td>
-                        <td>94</td>
-                        <td>281</td>
-                        <td>93.67%</td>
-                        <td><span class="grade">A+</span></td>
-                    </tr>
-
-                </tbody>
-
-                <tfoot>
-                    <tr>
-                        <td colspan="3">Class Average</td>
-                        <td>75</td>
-                        <td>79.4</td>
-                        <td>77.6</td>
-                        <td>232</td>
-                        <td>77.60%</td>
-                        <td>—</td>
-                    </tr>
-                </tfoot>
-
-            </table>
-
-            <p class="note">
-                Note: Each subject carries 100 marks.
-                All student names and marks are sample data.
+            <p>
+                Hello! I am Sagar Chouhan from Surat, Gujarat.
+                I am passionate about technology, Artificial
+                Intelligence, business and content creation.
             </p>
 
         </div>
 
-        <footer>
-            <p>© 2026 BCA Web Development Practical</p>
-            <p>Created using HTML5 and CSS3</p>
-        </footer>
+        <!-- Education -->
+        <section id="education">
 
-    </div>
+            <h2>Educational Qualification</h2>
+
+            <ul>
+                <li>Class 10 – Completed</li>
+                <li>Class 12 – Commerce Stream, GSEB</li>
+                <li>Bachelor of Computer Applications – Pursuing</li>
+                <li>BCA Academic Period – 2026 to 2029</li>
+            </ul>
+
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+
+            <h2>My Skills</h2>
+
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">JavaScript Basics</span>
+            <span class="skill">AI Tools</span>
+            <span class="skill">Video Editing</span>
+            <span class="skill">Content Creation</span>
+            <span class="skill">Communication</span>
+
+        </section>
+
+        <!-- Hobbies -->
+        <section id="hobbies">
+
+            <h2>My Hobbies & Interests</h2>
+
+            <ul>
+                <li>Learning Artificial Intelligence</li>
+                <li>Exploring New Technologies</li>
+                <li>Creating Digital Content</li>
+                <li>Video Editing and Storytelling</li>
+                <li>Public Speaking</li>
+                <li>Learning New Skills</li>
+            </ul>
+
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements">
+
+            <h2>Achievements & Projects</h2>
+
+            <div class="achievement">
+                <strong>Project 1:</strong>
+                Created a Personal Introduction Webpage using HTML5.
+            </div>
+
+            <div class="achievement">
+                <strong>Project 2:</strong>
+                Developed a College Department Webpage using HTML and CSS.
+            </div>
+
+            <div class="achievement">
+                <strong>Project 3:</strong>
+                Designed a Technical Event Webpage.
+            </div>
+
+            <div class="achievement">
+                <strong>Project 4:</strong>
+                Created a Semester Subjects Webpage with internal links.
+            </div>
+
+            <div class="achievement">
+                <strong>Future Goal:</strong>
+                Developing practical skills in web development and AI.
+            </div>
+
+        </section>
+
+        <!-- Contact Information -->
+        <section id="contact" class="contact">
+
+            <h2>Contact Information</h2>
+
+            <p><strong>City:</strong> Surat, Gujarat, India</p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/" target="_blank">
+                    Visit GitHub
+                </a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    Visit LinkedIn
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sagar Chouhan | Student Portfolio</p>
+        <p>Created using HTML5 and CSS3.</p>
+    </footer>
 
 </body>
 </html>
