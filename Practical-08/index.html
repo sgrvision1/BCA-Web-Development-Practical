@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechNova 2026 - Event Registration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f8;
+            color: #253047;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #101b36;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #cbd5e1;
+        }
+
+        .event-info {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 18px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 18px;
+            text-align: center;
+            border-radius: 9px;
+        }
+
+        .info-card h3 {
+            color: #2563eb;
+            margin-bottom: 5px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #172554;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+        }
+
+        .options input {
+            width: auto;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .submit {
+            background: #2563eb;
+            color: white;
+        }
+
+        .submit:hover {
+            background: #1d4ed8;
+        }
+
+        .reset {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        footer {
+            background: #101b36;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 650px) {
+            .event-info {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                margin: 18px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Event Header -->
+    <header>
+        <h1>TechNova 2026</h1>
+        <p>National Technology & Innovation Festival</p>
+        <p>Innovate • Create • Inspire</p>
+    </header>
+
+    <!-- Event Details -->
+    <section class="event-info">
+
+        <div class="info-card">
+            <h3>Event Date</h3>
+            <p>20 December 2026</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Event Time</h3>
+            <p>10:00 AM - 5:00 PM</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Venue</h3>
+            <p>Rajkot, Gujarat</p>
+        </div>
+
+    </section>
+
+    <!-- Registration Form -->
+    <main class="container">
+
+        <h2>Event Registration</h2>
+
+        <p class="subtitle">
+            Register yourself for TechNova 2026.
+        </p>
+
+        <form action="#" method="get">
+
+            <div class="field">
+                <label for="name">Participant Name *</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <div class="field">
+                <label for="phone">Mobile Number *</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="10 digit mobile number"
+                       pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+
+            <div class="field">
+                <label for="college">College Name</label>
+                <input type="text" id="college" name="college"
+                       placeholder="Enter your college name">
+            </div>
+
+            <div class="field">
+                <label for="event">Select Event *</label>
+                <select id="event" name="event" required>
+                    <option value="">Choose an event</option>
+                    <option>AI Innovation Workshop</option>
+                    <option>Coding Competition</option>
+                    <option>Robotics Challenge</option>
+                    <option>Web Development Contest</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Gender *</label>
+
+                <div class="options">
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Male" required> Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Female"> Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Other"> Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="date">Registration Date *</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="field">
+                <label for="message">Additional Message</label>
+                <textarea id="message" name="message"
+                          rows="4"
+                          placeholder="Tell us about your interests..."></textarea>
+            </div>
+
+            <div class="field">
+                <label>
+                    <input type="checkbox" required
+                           style="width:auto;">
+                    I agree to the event terms and conditions.
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="submit">
+                    Register Now
+                </button>
+
+                <button type="reset" class="reset">
+                    Reset Form
+                </button>
+            </div>
+
+        </form>
+
+        <p class="subtitle" style="margin-top:20px;">
+            Demo registration form. Information is not stored.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechNova Technology Festival</p>
+        <p>Created using HTML5 and CSS3</p>
+    </footer>
+
+</body>
+</html>
