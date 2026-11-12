@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Eligibility</title>
+</head>
+<body>
+
+    <h2>Student Eligibility Checker</h2>
+
+    <label>Student Name:</label>
+    <input type="text" id="name">
+    <br><br>
+
+    <label>Attendance Percentage:</label>
+    <input type="number" id="attendance">
+    <br><br>
+
+    <label>Marks:</label>
+    <input type="number" id="marks">
+    <br><br>
+
+    <button onclick="checkEligibility()">Check Eligibility</button>
+
+    <script>
+
+        function checkEligibility() {
+
+            var name = document.getElementById("name").value;
+            var attendance = Number(document.getElementById("attendance").value);
+            var marks = Number(document.getElementById("marks").value);
+
+            if (name == "" || document.getElementById("attendance").value == "" ||
+                document.getElementById("marks").value == "") {
+
+                alert("Please enter all details.");
+            }
+
+            else if (attendance < 0 || attendance > 100 ||
+                     marks < 0 || marks > 100) {
+
+                alert("Please enter valid values between 0 and 100.");
+            }
+
+            else if (attendance >= 75 && marks >= 35) {
+
+                alert(name + " is eligible for examination.");
+            }
+
+            else {
+
+                alert(name + " is not eligible for examination.");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
